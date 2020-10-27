@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloServlet1</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.HelloServlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloServlet1</servlet-name>
+        <url-pattern>/hello1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ComServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.ComServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ComServlet</servlet-name>
+        <url-pattern>/comServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--    DeleteServlet配置-->
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <!--    CreateServlet配置-->
+    <servlet>
+        <servlet-name>CreateServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.CreateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateServlet</servlet-name>
+        <url-pattern>/create</url-pattern>
+    </servlet-mapping>
+
+    <!--    UpdateServlet配置-->
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+<!--    LoginServlet配置-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.cjc.HelloServlet.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>userName</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123</param-value>
+        </init-param>
+        <init-param>
+            <param-name>driverName</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>dbURL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/cjc</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
